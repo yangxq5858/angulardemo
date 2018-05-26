@@ -1,3 +1,5 @@
+
+/*表示ts代码的主入口*/
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
