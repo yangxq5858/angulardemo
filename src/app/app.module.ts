@@ -13,7 +13,7 @@ import { NewsComponent } from './components/news/news.component';
 @NgModule({
   declarations: [
     AppComponent,/*引入当前项目运行的的组件  自定义组件都需要引入并且在这个里面配置*/
-    HeaderComponent，
+    HeaderComponent,
     NewsComponent
   ],
   imports: [

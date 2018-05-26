@@ -11,3 +11,52 @@
 
 <!--这是另一种属性绑定的方式-->
 <div [title]="age">用鼠标描上去看一下</div>
+
+<!--绑定后台返回的html数据-->
+<div [innerHTML]="content"></div>
+
+<div innerHTML="{{user.age}}"></div>
+<br/>
+<ul>
+ 
+    <!--循环数据-->
+
+      
+    <!--let 表示声明一个局部变量 ageList是一个list对象-->
+    <li *ngFor="let item of ageList">
+ 
+       我的年龄是{{item}}
+
+    </li>
+
+</ul>
+
+<br/>
+<ul>
+    <!--循环数据 和 索引-->
+    <li *ngFor="let item of xkList;let key=index">
+       {{item}}--{{key}}
+    </li>
+</ul>
+
+<br/>
+<ul>
+    <!--循环数据 和 索引-->
+    <li *ngFor="let item of list3;let key=index">
+       {{item.code}}--{{item.name}}--{{key}}----aaaa
+    </li>
+</ul>
+
+<br/>
+<ul>
+    <!--循环对象-->
+    <li *ngFor="let item of carList;let key=index">
+       {{item.carType}}
+       <ol>
+           <li *ngFor="let item1 of item.catagory">
+              {{item1.name}}
+           </li>
+       </ol>
+
+    </li>
+</ul>
