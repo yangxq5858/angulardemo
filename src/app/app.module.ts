@@ -5,14 +5,16 @@ import { NgModule } from '@angular/core';
 //引入自定义模块
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NewsComponent } from './components/news/news.component';
 
 
 /*@NgModule装饰器将AppModule标记为 Angular 模块类（也叫NgModule类）。
- @NgModule接受一个元数据对象，告诉 Angular 如何编译和启动应用。*/
+ @NgModule接受一个元数据对象，告诉 Angular 如何编, NewsComponent译和启动应用。*/
 @NgModule({
   declarations: [
     AppComponent,/*引入当前项目运行的的组件  自定义组件都需要引入并且在这个里面配置*/
-    HeaderComponent
+    HeaderComponent，
+    NewsComponent
   ],
   imports: [
     BrowserModule  /*当前的项目依赖哪些模块*/
