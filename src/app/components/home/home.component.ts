@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public title:String;
+  public msg:any;
+  constructor() {
+    this.title = '这是Home组件';
+    this.msg = `hi${this.title}
+    
+    haha  `;
+
+   }
 
   ngOnInit() {
+  }
+
+   getMsg(){
+    alert(this.msg);
   }
 
 }
