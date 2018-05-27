@@ -1,3 +1,21 @@
-<p>
-  todolist works!
-</p>
+<input type="text" [(ngModel)]='todoVal' (keyup) = 'addData($event)'>请按回车键加入数据
+<hr>
+<h2>正在进行中</h2>
+<hr>
+<ul>
+  <li *ngFor="let item of todoList;let i = index" [hidden] = 'item.status == 1'>
+   <button (click)='changeStatus(i,1)'>改变状态</button> {{item.todoVal}} <button (click)=delData(i)>删除</button>
+  </li>
+</ul>
+
+<h2>已完成</h2>
+<hr>
+<ul>
+  <li *ngFor="let item of todoList;let i = index" [hidden] = 'item.status == 0'>
+    <button (click)='changeStatus(i,0)'>改变状态</button> {{item.todoVal}} <button (click)=delData(i)>删除</button>
+  </li>
+</ul>
+
+
+<!-- CTRL + K CTRL + C 批量注释
+CTRL + K CTRL + U 取消批量注释 -->
