@@ -7,19 +7,24 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NewsComponent } from './components/news/news.component';
 
-
-/*@NgModule装饰器将AppModule标记为 Angular 模块类（也叫NgModule类）。
- @NgModule接受一个元数据对象，告诉 Angular 如何编, NewsComponent译和启动应用。*/
 @NgModule({
+  //引入当前项目运行的的组件  自定义组件都需要引入并且在这个里面配置
   declarations: [
-    AppComponent,/*引入当前项目运行的的组件  自定义组件都需要引入并且在这个里面配置*/
+    AppComponent,
     HeaderComponent,
     NewsComponent
   ],
+  //当前的项目依赖哪些模块
   imports: [
-    BrowserModule  /*当前的项目依赖哪些模块*/
+    BrowserModule  
   ],
-  providers: [], /*定义的服务*/
-  bootstrap: [AppComponent] /*默认启动那个组件*/
+  //定义的服务
+  providers: [], 
+  //默认启动那个组件
+  bootstrap: [AppComponent] 
 })
-export class AppModule { }/*根模块不需要导出任何东西，   因为其它组件不需要导入根模块。 但是一定要写*/
+//根模块不需要导出任何东西，   因为其它组件不需要导入根模块。 但是一定要写
+export class AppModule { }
+
+
+
