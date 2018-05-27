@@ -3,3 +3,23 @@
 </p>
 <br>
 <button (click)=getMsg()>按钮1</button>
+
+<br>
+{{username}}
+<br>
+<button (click)=setUserName()>改变userName的值</button>
+
+<br>
+<div *ngIf='flag'>flag = true 显示这个div</div>
+<button (click)='flag =!flag '>改变flag的值</button>
+<hr>
+
+<!--绑定事件 -->
+<input type="text" (keyup)='keyupFn($event)'/>
+<hr>
+<!--双向数据绑定 -->
+<input type="text" [(ngModel)]='searchVal'/>
+<br>
+{{searchVal}}
+
+<button (click)='getSearchVal()'>获取SearchVal的值</button>
